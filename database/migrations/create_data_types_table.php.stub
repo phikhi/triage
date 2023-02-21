@@ -8,12 +8,17 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('triage_table', function (Blueprint $table) {
+        Schema::create('data_types', function (Blueprint $table) {
             $table->id();
-
-            // add fields
-
+            $table->string('name');
+            $table->uuid('uuid')->index();
+            $table->string('slug')->index();
             $table->timestamps();
         });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('data_types');
     }
 };

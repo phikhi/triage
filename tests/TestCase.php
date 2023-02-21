@@ -28,9 +28,12 @@ class TestCase extends Orchestra
     {
         config()->set('database.default', 'testing');
 
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_triage_table.php.stub';
-        $migration->up();
-        */
+        foreach ([
+            'create_data_providers_table',
+            'create_data_types_table',
+        ] as $table) {
+            $migration = include __DIR__.'/../database/migrations/'.$table.'.php.stub';
+            $migration->up();
+        }
     }
 }
