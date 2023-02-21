@@ -36,6 +36,53 @@ return [
 
 ```php
 $triage = new Phikhi\Triage();
+
+$datas = [
+    'ABC' => null,
+    'DEF' => 100,
+    'GHI' => 200,
+    'JKL' => 5,
+    'MNO' => -10,
+];
+
+$mapping = [
+    'ABC' => [
+        'from' => [
+            'sum' => [
+                'DEF',
+                'GHI',
+                [
+                    'sub' => ['JKL', 'MNO'],
+                    'move' => true, // default false
+                    'preserve' => false // default true
+                ]
+            ],
+            'move' => true, // default false
+        ]
+    ],
+    'DEF' => [
+        'from' => [
+            ['copy' => ['ABC']]
+            ['copy' => ['ABC']]
+        ],
+        'to' => [1,2],
+    ]
+    'GHI' => [
+        'from' => [
+            ['copy' => ['ABC']]
+            ['copy' => ['ABC']]
+        ],
+        'to' => ["amount.raw", "amount.net"],
+    ]
+];
+
+
+// could expects
+$datas = [
+    'ABC' => 315, // (DEF + GHI + (JKL - MNO) ) = (100 + 200 + (5 -(-10)) ) = 315
+    'DEF' => [null, 315, 315]
+    'GHI' => ["amount" => ["raw" => 315, "net" => 315]],
+];
 ```
 
 ## Testing
