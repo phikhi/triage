@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Phikhi\Triage\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class TriageCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'triage';
 
     public $description = 'My command';
 

@@ -1,17 +1,19 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "phikhi/triage",
+    "description": "(WIP) Data normalization package for Laravel",
     "keywords": [
-        ":vendor_name",
+        "phikhi",
+        "data",
+        "normalization",
         "laravel",
-        ":package_slug"
+        "triage"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/phikhi/triage",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Philippe Khill",
+            "email": "hello@phikhi.com",
             "role": "Developer"
         }
     ],
@@ -30,18 +32,17 @@
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^1.0",
         "phpstan/phpstan-phpunit": "^1.0",
-        "phpunit/phpunit": "^9.6",
-        "spatie/laravel-ray": "^1.26"
+        "phpunit/phpunit": "^9.6"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Phikhi\\Triage\\": "src",
+            "Phikhi\\Triage\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Phikhi\\Triage\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -61,10 +62,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Phikhi\\Triage\\TriageServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "Triage": "Phikhi\\Triage\\Facades\\Triage"
             }
         }
     },
