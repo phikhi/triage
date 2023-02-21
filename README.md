@@ -8,6 +8,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/phikhi/triage.svg?style=flat-square)](https://packagist.org/packages/phikhi/triage)
 
 Data normalization package for Laravel.
+
 🚧 WIP 🚨 DO NOT USE IN PRODUCTION RIGHT NOW !
 
 ## Installation
