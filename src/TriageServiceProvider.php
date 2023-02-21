@@ -14,6 +14,7 @@ class TriageServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasMigrations([
                 'create_data_providers_table',
+                'create_data_types_table',
             ]);
     }
 }
